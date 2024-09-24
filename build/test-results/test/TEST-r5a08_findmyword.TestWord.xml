@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="r5a08_findmyword.TestWord" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-09-24T09:52:54" hostname="einfolearning" time="0.008">
+  <properties/>
+  <testcase name="should_check_one_incorrect_letter()" classname="r5a08_findmyword.TestWord" time="0.008"/>
+  <testcase name="should_check_one_correct_letter()" classname="r5a08_findmyword.TestWord" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

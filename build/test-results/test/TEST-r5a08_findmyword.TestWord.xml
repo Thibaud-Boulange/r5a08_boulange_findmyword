@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="r5a08_findmyword.TestWord" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-09-24T09:52:54" hostname="einfolearning" time="0.008">
+<testsuite name="r5a08_findmyword.TestWord" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-10-08T10:16:02" hostname="einfolearning" time="0.019">
   <properties/>
-  <testcase name="should_check_one_incorrect_letter()" classname="r5a08_findmyword.TestWord" time="0.008"/>
-  <testcase name="should_check_one_correct_letter()" classname="r5a08_findmyword.TestWord" time="0.0"/>
+  <testcase name="should_check_one_incorrect_letter()" classname="r5a08_findmyword.TestWord" time="0.012"/>
+  <testcase name="should_check_all_incorrect_letters()" classname="r5a08_findmyword.TestWord" time="0.001"/>
+  <testcase name="should_check_one_correct_wrong_placed_letter_and_all_incorrect_letters()" classname="r5a08_findmyword.TestWord" time="0.001"/>
+  <testcase name="should_check_one_correct_letter()" classname="r5a08_findmyword.TestWord" time="0.001"/>
+  <testcase name="should_check_one_correct_letter_and_one_incorrect_letter_when_appearing_twice_in_guess()" classname="r5a08_findmyword.TestWord" time="0.001"/>
+  <testcase name="should_check_all_correct_wrong_placed_letters()" classname="r5a08_findmyword.TestWord" time="0.001"/>
+  <testcase name="should_check_all_correct_letters()" classname="r5a08_findmyword.TestWord" time="0.0"/>
+  <testcase name="should_check_one_correct_letter_one_incorrect_letter()" classname="r5a08_findmyword.TestWord" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

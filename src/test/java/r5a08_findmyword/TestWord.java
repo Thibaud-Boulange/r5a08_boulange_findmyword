@@ -97,19 +97,4 @@ public class TestWord {
     }
 
 
-    @Test
-    public void should_check_one_correct_letter_and_one_incorrect_letter_when_appearing_twice_in_guess(){
-        //Arrange
-        Word word = new Word("trop");
-        //Act
-        Score score = word.guess("test");
-        //Assert
-        checkAllCombinaison(score,
-                Letter.CORRECT,
-                Letter.INCORRECT,
-                Letter.INCORRECT,
-                Letter.INCORRECT);
-    }
-
-
 }

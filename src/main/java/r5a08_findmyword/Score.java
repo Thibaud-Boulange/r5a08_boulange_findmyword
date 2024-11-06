@@ -7,12 +7,10 @@ public class Score {
 
     private final String correct;
     private ArrayList<Letter> result = new ArrayList<Letter>();
+    private int position = 0;
 
     public Score(String correct) {
         this.correct=correct;
-        for(int i=0; i < correct.length(); i++){
-            result.add(Letter.INCORRECT);
-        }
     }
 
     public Letter letter(int i) {
@@ -20,23 +18,28 @@ public class Score {
     }
 
     public void assess(String attempt) {
-        for(int position=0; position < attempt.length() && position < this.correct.length(); position++)
-            if (this.correct.charAt(position)==attempt.charAt(position)){
-                result.set(position, Letter.CORRECT);
+        for(char current : attempt.toCharArray()){
+            this.result.add(scoreForLetter(current));
+            this.position ++;
             }
-            else if (occursInWord(attempt.charAt(position)) && attempt.indexOf(attempt.charAt(position)) == position){
-                result.set(position, Letter.PART_CORRECT);
-            }
-
         }
+
+    private Letter scoreForLetter(char current) {
+        if(isCorrectLetter(current)){
+            return Letter.CORRECT;
+        }
+        if(occursInWord(current)){
+            return Letter.PART_CORRECT;
+        }
+        return Letter.INCORRECT;
+    }
+
+    private boolean isCorrectLetter(char current) {
+        return this.correct.charAt(this.position)== current;
+    }
 
     private boolean occursInWord(char current) {
-        for (int position=0;position<this.correct.length();position++){
-            if (this.correct.charAt(position)==current){
-                return true;
-            }
-        }
-        return false;
+            return this.correct.contains(String.valueOf(current));
     }
 
     public List<Letter> letters() {
